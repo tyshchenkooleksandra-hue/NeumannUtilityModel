@@ -9,6 +9,12 @@ public class Program
         var scenario2 = new Scenario { Name = "Crisis", Probability = 0.1 };
         var scenario3 = new Scenario { Name = "Inflation", Probability = 0.4 };
 
+        var totalProbability = scenario1.Probability + scenario2.Probability + scenario3.Probability;
+        if (Math.Abs(totalProbability - 1.0) > 1e-9)
+        {
+            Console.WriteLine($"Warning: Total probability = {totalProbability:F2}, should be 1.0");
+        }
+
         var decisions = new Decisions
         {
             new ()
