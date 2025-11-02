@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/NeumannUtilityModel/.vs
+/NeumannUtilityModel/bin/Debug/net8.0
+/NeumannUtilityModel/obj
