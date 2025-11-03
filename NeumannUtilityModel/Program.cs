@@ -62,6 +62,8 @@ public class Program
         Func<double, double> func = outcome => Math.Pow(outcome + 5, 2) / 15.0;
 
         CalculateUtility(func, decisions);
+        var result = decisions.OrderByDescending(x => x.Utility).First();
+        Console.WriteLine(result.Name + "is the best decision ");
     }
 
     public static void CalculateUtility(Func<double, double> func, Decisions decisions)
